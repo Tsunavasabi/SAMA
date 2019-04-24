@@ -1,0 +1,30 @@
+h1, p, h6, h2{
+    text-align: center;
+    color: #000;
+}
+
+ion-card-header {
+    text-align: center;
+    --color: #000;
+}
+
+ion-content {
+    --background: linear-gradient(rgb(244, 183, 161), rgb(83, 72, 208));
+    --ion-font-family: 'Prompt', sans-serif;
+}
+
+ion-item {
+    --background: transparent;
+}
+
+ion-card {
+    --background: #fff;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: #222 0 4px 8px 0;
+    transition: 0.5s;
+}
+
+

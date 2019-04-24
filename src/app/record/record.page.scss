@@ -1,0 +1,22 @@
+ion-label {
+    --color: #000;
+}
+
+ion-card-header {
+    text-align: center;
+    --color: #000;
+}
+
+ion-card {
+    --background: #fff;
+}
+
+ion-content {
+    --background: linear-gradient(rgb(244, 183, 161), rgb(83, 72, 208));
+    --ion-font-family: 'Prompt', sans-serif;
+
+}
+
+ion-button {
+    --border-radius: 20%;
+}

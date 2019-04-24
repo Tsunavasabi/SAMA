@@ -1,0 +1,154 @@
+<ion-header translucent="true">
+    <ion-toolbar>
+        <ion-buttons (click)="openMenu()" 
+        slot="start"><ion-icon name="menu" slot="icon-only" style="zoom: 0"></ion-icon></ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding fullscreen>
+  <p><img src="../../assets/imgs/04475.jpg" width="40%"></p>
+  <ion-card>
+    <ion-card-content>
+      <h1><b>{{userdata.std_firstname}} {{userdata.std_lastname}}</b></h1><br>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h2>Activity</h2>
+            <h1><b>45</b></h1>
+          </ion-col>
+          <ion-col>
+            <h2>Finished</h2>
+            <h1><b>10</b></h1>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Create Activity Record
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card id="so" (click)="ToOutreach()">
+              <ion-card-content text-warp>
+                <ion-icon name="globe" mode="md"></ion-icon>
+                <p>Social Outreach</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+              <ion-card id="sc" (click)="ToSchool()">
+                <ion-card-content text-warp>
+                  <ion-icon name="school" mode="md"></ion-icon>
+                  <p>School Outreach</p>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              <ion-card id="rb" (click)="ToBook()">
+                <ion-card-content text-warp>
+                  <ion-icon name="book" mode="md"></ion-icon>
+                  <p>Reading Book</p>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-card id="ea" (click)="ToExercise()">
+                  <ion-card-content text-warp>
+                    <ion-icon name="fitness" mode="md"></ion-icon>
+                    <p>Exercise Activity</p>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                <ion-card id="ac" (click)="ToAcademic()">
+                  <ion-card-content text-warp>
+                    <ion-icon name="easel" mode="md"></ion-icon>
+                    <p>Academic Camp</p>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col>
+                  <ion-card id="mc" (click)="ToMoral()">
+                    <ion-card-content text-warp>
+                      <ion-icon name="bonfire" mode="md"></ion-icon>
+                      <p>Moral<br>Camp</p>
+                    </ion-card-content>
+                  </ion-card>
+                </ion-col>
+            </ion-row>
+              <ion-row>
+                  <ion-col>
+                    <ion-card id="sv" (click)="ToScivisit()">
+                      <ion-card-content text-warp>
+                        <ion-icon name="beaker" mode="md"></ion-icon>
+                        <p>Science Visit</p>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-col>
+                  <ion-col>
+                      <ion-card id="scv" (click)="ToSocialvisit()">
+                        <ion-card-content text-warp>
+                          <ion-icon name="contacts" mode="md"></ion-icon>
+                          <p>Social Visit</p>
+                        </ion-card-content>
+                      </ion-card>
+                    </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                    <ion-card id="sl" (click)="ToScilecture()">
+                      <ion-card-content text-warp>
+                        <ion-icon name="flask" mode="md"></ion-icon>
+                        <p>Science Lecture</p>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-col>
+                  <ion-col>
+                      <ion-card id="pl" (click)="ToPersonlecture()">
+                        <ion-card-content text-warp>
+                          <ion-icon name="body" mode="md"></ion-icon>
+                          <p>Personality Lecture</p>
+                        </ion-card-content>
+                      </ion-card>
+                    </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                    <ion-card id="scl" (click)="ToSociallecture()">
+                      <ion-card-content text-warp>
+                        <ion-icon name="people" mode="md"></ion-icon>
+                        <p>Social Lecture</p>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-col>
+                  <ion-col>
+                      <ion-card id="ca" (click)="ToClub()">
+                        <ion-card-content text-warp>
+                          <ion-icon name="color-palette" mode="md"></ion-icon>
+                          <p>Club<br>Activity</p>
+                        </ion-card-content>
+                      </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                      <ion-card id="mt" (click)="ToMeet()">
+                        <ion-card-content text-warp>
+                          <ion-icon name="hand" mode="md"></ion-icon>
+                          <p>Meet Teacher</p>
+                        </ion-card-content>
+                      </ion-card>
+                    </ion-col>
+                    <ion-col></ion-col>
+                  </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

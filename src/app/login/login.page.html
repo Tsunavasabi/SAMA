@@ -1,0 +1,17 @@
+<ion-content padding fullscreen="true">
+  <p><img src="../../assets/imgs/icon.png" width="70%"></p>
+  <ion-card>
+      <h2><b>SIGN IN</b></h2>
+    <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input autofocus="true" type="text" [(ngModel)]="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item><br>
+        <ion-button expand="full" shape="round" color="tertiary" (click)="login()">SIGN IN</ion-button>
+    </ion-card-content><br>
+  </ion-card>
+</ion-content>

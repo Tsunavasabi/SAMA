@@ -1,0 +1,420 @@
+<ion-header>
+  <ion-toolbar color="dark">
+      <ion-buttons slot="start" color="light">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>RECORD ACTIVITY</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<form *ngIf="key == 'out'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Social Outreach Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+        <ion-item>
+          <ion-label>DD/MM/YYYY</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Hour</ion-label>
+          <ion-input type="number" name="hour" position="stacked" max="2"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Place for outreach</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Outreach Description</ion-label>
+          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Impression</ion-label>
+          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form> 
+  <form *ngIf="key == 'sch'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>School Outreach Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+        <ion-item>
+          <ion-label>DD/MM/YYYY</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Hour</ion-label>
+          <ion-input type="number" name="hour" position="stacked" max="2"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Place for outreach</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Outreach Description</ion-label>
+          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Impression</ion-label>
+          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'book'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Reading Book Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+        <ion-item>
+          <ion-label>Book Title</ion-label>
+          <ion-input type="number" name="hour" position="stacked" max="2"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Author</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Edition</ion-label>
+          <ion-input type="number" name="place" position="stacked"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Publisher</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Year</ion-label>
+          <ion-datetime display-format="YYYY" name="date" position="stacked"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Book Description</ion-label>
+          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Impression</ion-label>
+          <ion-textarea type="text" name="feel" rows=3></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'aca'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Academic Camp Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Title of camp</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Place of camp</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Camp knowledge</ion-label>
+          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Impression</ion-label>
+          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'moral'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Moral Camp Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label position="stacked">Title of camp</ion-label>
+            <ion-input type="text" name="place"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Place of camp</ion-label>
+            <ion-input type="text" name="place"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Camp knowledge</ion-label>
+            <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Impression</ion-label>
+            <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+          </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'sciv'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Science Visiting Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+        <ion-item>
+          <ion-label>Date of visit</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Place of visit</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title of visit</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Visiting knowledge</ion-label>
+          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Impression</ion-label>
+          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'sov'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Social Visiting Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>Date of visit</ion-label>
+            <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Place of visit</ion-label>
+            <ion-input type="text" name="place"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Title of visit</ion-label>
+            <ion-input type="text" name="place"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Visiting knowledge</ion-label>
+            <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Impression</ion-label>
+            <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+          </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'scil'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Science Lecture Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+        <ion-item>
+          <ion-label>Date of lecture</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title of lecture</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Lecture knowledge</ion-label>
+          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Impression</ion-label>
+          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'person'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Pesonality Lecture Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+        <ion-item>
+          <ion-label>Date of lecture</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title of lecture</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Lecture knowledge</ion-label>
+          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Impression</ion-label>
+          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'sol'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Social Lecture Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+        <ion-item>
+          <ion-label>Date of lecture</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title of lecture</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Lecture knowledge</ion-label>
+          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Impression</ion-label>
+          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'club'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Club Activity Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>Semester</ion-label>
+            <ion-input type="number" name="hour" position="stacked"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Education Year</ion-label>
+            <ion-datetime display-format="YYYY" name="date"></ion-datetime>
+          </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Title of club</ion-label>
+          <ion-input type="text" name="place"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Type of club</ion-label>
+            <ion-select value="">
+              <ion-select-option value="brown">Academic Club</ion-select-option>
+              <ion-select-option value="blonde">Sport & Exercise Club</ion-select-option>
+              <ion-select-option value="black">Social Club</ion-select-option>
+              <ion-select-option value="red">Other Club</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Club knowledge</ion-label>
+          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Impression</ion-label>
+          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'exer'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Exercise Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+        <ion-item>
+          <ion-label>DD/MM/YYYY</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Start</ion-label>
+          <ion-datetime display-format="HH : mm" name="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>End</ion-label>
+          <ion-datetime display-format="HH : mm" name="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Exercise Description</ion-label>
+          <ion-input type="text" name="feel"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+
+  <form *ngIf="key == 'meet'">
+    <ion-card>
+      <ion-card-header>
+        <h2><b>Meet Teacher Form</b></h2>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+        <ion-item>
+          <ion-label>DD/MM/YYYY</ion-label>
+          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Title of meeting</ion-label>
+          <ion-input type="text" name="hour" position="stacked" max="2"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+  </form>
+</ion-content> 

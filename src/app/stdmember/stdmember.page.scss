@@ -1,0 +1,106 @@
+img {
+    border-radius: 10%;
+    box-shadow: #777 0 4px 8px 0;
+}
+
+ion-card {
+    --background: #FFF;
+    text-align: center;
+    --color: #000;
+}
+
+ion-content {
+    --background: linear-gradient(rgb(244, 183, 161), rgb(83, 72, 208));
+    --ion-font-family: 'Prompt', sans-serif;
+}
+
+p {
+    text-align: center;
+    font-size: 8pt;
+}
+
+ion-toolbar {
+    --background: transparent !important;
+}
+
+ion-card#so {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #F18252, #FA5997);
+    --color: #fff;
+}
+
+ion-card#sc {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #FFBB34, #F51D61);
+    --color: #fff;
+}
+
+ion-card#rb {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #F95A6D, #FED28B);
+    --color: #fff;
+}
+
+ion-card#ca {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #F2C46C, #A362DE);
+    --color: #fff;
+}
+
+ion-card#ac {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #DAE16B, #1EA4A2);
+    --color: #fff;
+}
+
+ion-card#mc {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #74E4D1, #1B7DA3);
+    --color: #fff;
+}
+
+ion-card#sv {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #20CEE2, #5F58E4);
+    --color: #fff;
+}
+
+ion-card#scv {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, 	#37E2CD, #B419E4);
+    --color: #fff;
+}
+
+ion-card#sl {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #6A61CA, #BE8DDF);
+    --color: #fff;
+}
+
+ion-card#pl {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #85D2EF, #EB3C70);
+    --color: #fff;
+}
+
+ion-card#scl {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #310587,#C86597);
+    --color: #fff;
+}
+
+ion-card#ea {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #FFC731, #F58A46);
+    --color: #fff;
+}
+
+ion-card#mt {
+    margin: -2px;
+    --background: linear-gradient(to bottom right, #0F2991, #0F9EA0);
+    --color: #fff;
+}
+
+ion-icon {
+    zoom: 3.0;
+}
