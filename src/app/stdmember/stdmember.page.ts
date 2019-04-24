@@ -9,6 +9,7 @@ import { MenuController, NavController } from '@ionic/angular';
 export class StdmemberPage implements OnInit {
   key: string
   userdata: any
+  full = 55;
   constructor(private menu: MenuController, private navCtrl: NavController) { }
 
   ngOnInit() {

@@ -18,28 +18,29 @@
         <ion-list>
         <ion-item>
           <ion-label>DD/MM/YYYY</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" name="date" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label>Hour</ion-label>
-          <ion-input type="number" name="hour" position="stacked" max="2"></ion-input>
+          <ion-input type="number" name="hour" position="stacked" max="2" [(ngModel)]="formdetail.hour"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Place for outreach</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" name="place" [(ngModel)]="formdetail.place"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Outreach Description</ion-label>
-          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          <ion-textarea type="text" name="make" rows=5 [(ngModel)]="formdetail.make"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Impression</ion-label>
-          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+          <ion-textarea type="text" name="feel" rows=3 [(ngModel)]="formdetail.feel"></ion-textarea>
         </ion-item>
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" (click)="Form1Confirm()"
+    size="large" color=light expand="full">SAVE</ion-button>
   </form> 
   <form *ngIf="key == 'sch'">
     <ion-card>
@@ -50,23 +51,23 @@
         <ion-list>
         <ion-item>
           <ion-label>DD/MM/YYYY</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" name="date" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label>Hour</ion-label>
-          <ion-input type="number" name="hour" position="stacked" max="2"></ion-input>
+          <ion-input type="number" name="hour" position="stacked" max="2" [(ngModel)]="formdetail.hour"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Place for outreach</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" name="place" [(ngModel)]="formdetail.place"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Outreach Description</ion-label>
-          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          <ion-textarea type="text" name="make" rows=8 [(ngModel)]="formdetail.make"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Impression</ion-label>
-          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+          <ion-textarea type="text" name="feel" rows=5 [(ngModel)]="formdetail.feel"></ion-textarea>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -83,31 +84,31 @@
         <ion-list>
         <ion-item>
           <ion-label>Book Title</ion-label>
-          <ion-input type="number" name="hour" position="stacked" max="2"></ion-input>
+          <ion-input type=text position="stacked" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Author</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" [(ngModel)]="formdetail.place"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Edition</ion-label>
-          <ion-input type="number" name="place" position="stacked"></ion-input>
+          <ion-input type="number" position="stacked" [(ngModel)]="formdetail.hour"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Publisher</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" [(ngModel)]="formdetail.print"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Year</ion-label>
-          <ion-datetime display-format="YYYY" name="date" position="stacked"></ion-datetime>
+          <ion-datetime display-format="YYYY" position="stacked" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Book Description</ion-label>
-          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          <ion-textarea type="text" name="make" rows=8 [(ngModel)]="formdetail.make"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Impression</ion-label>
-          <ion-textarea type="text" name="feel" rows=3></ion-textarea>
+          <ion-textarea type="text" name="feel" rows=3 [(ngModel)]="formdetail.feel"></ion-textarea>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -124,19 +125,19 @@
         <ion-list>
         <ion-item>
           <ion-label position="stacked">Title of camp</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" name="place" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Place of camp</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" name="place" [(ngModel)]="formdetail.place"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Camp knowledge</ion-label>
-          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          <ion-textarea type="text" name="make" rows=8 [(ngModel)]="formdetail.make"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Impression</ion-label>
-          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+          <ion-textarea type="text" name="feel" rows=5 [(ngModel)]="formdetail.feel"></ion-textarea>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -153,19 +154,19 @@
         <ion-list>
           <ion-item>
             <ion-label position="stacked">Title of camp</ion-label>
-            <ion-input type="text" name="place"></ion-input>
+            <ion-input type="text" name="place" [(ngModel)]="formdetail.head"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Place of camp</ion-label>
-            <ion-input type="text" name="place"></ion-input>
+            <ion-input type="text" name="place" [(ngModel)]="formdetail.place"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Camp knowledge</ion-label>
-            <ion-textarea type="text" name="make" rows=8></ion-textarea>
+            <ion-textarea type="text" name="make" rows=8 [(ngModel)]="formdetail.make"></ion-textarea>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Impression</ion-label>
-            <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+            <ion-textarea type="text" name="feel" rows=5 [(ngModel)]="formdetail.feel"></ion-textarea>
           </ion-item>
       </ion-list>
     </ion-card-content>
@@ -182,23 +183,23 @@
         <ion-list>
         <ion-item>
           <ion-label>Date of visit</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Place of visit</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" [(ngModel)]="formdetail.place"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Title of visit</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Visiting knowledge</ion-label>
-          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          <ion-textarea type="text" name="make" rows=8 [(ngModel)]="formdetail.make"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Impression</ion-label>
-          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+          <ion-textarea type="text" name="feel" rows=5 [(ngModel)]="formdetail.feel"></ion-textarea>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -215,23 +216,23 @@
         <ion-list>
           <ion-item>
             <ion-label>Date of visit</ion-label>
-            <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+            <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Place of visit</ion-label>
-            <ion-input type="text" name="place"></ion-input>
+            <ion-input type="text" name="place" [(ngModel)]="formdetail.place"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Title of visit</ion-label>
-            <ion-input type="text" name="place"></ion-input>
+            <ion-input type="text" name="place" [(ngModel)]="formdetail.head"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Visiting knowledge</ion-label>
-            <ion-textarea type="text" name="make" rows=8></ion-textarea>
+            <ion-textarea type="text" name="make" rows=8 [(ngModel)]="formdetail.make"></ion-textarea>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Impression</ion-label>
-            <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+            <ion-textarea type="text" name="feel" rows=5 [(ngModel)]="formdetail.feel"></ion-textarea>
           </ion-item>
       </ion-list>
     </ion-card-content>
@@ -248,19 +249,19 @@
         <ion-list>
         <ion-item>
           <ion-label>Date of lecture</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Title of lecture</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Lecture knowledge</ion-label>
-          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          <ion-textarea type="text" name="make" rows=8 [(ngModel)]="formdetail.make"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Impression</ion-label>
-          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+          <ion-textarea type="text" name="feel" rows=5 [(ngModel)]="formdetail.feel"></ion-textarea>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -277,19 +278,19 @@
         <ion-list>
         <ion-item>
           <ion-label>Date of lecture</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Title of lecture</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" name="place" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Lecture knowledge</ion-label>
-          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          <ion-textarea type="text" name="make" rows=8 [(ngModel)]="formdetail.make"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Impression</ion-label>
-          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+          <ion-textarea type="text" name="feel" rows=5 [(ngModel)]="formdetail.feel"></ion-textarea>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -306,19 +307,19 @@
         <ion-list>
         <ion-item>
           <ion-label>Date of lecture</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Title of lecture</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Lecture knowledge</ion-label>
-          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          <ion-textarea type="text" name="make" rows=8 [(ngModel)]="formdetail.make"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Impression</ion-label>
-          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+          <ion-textarea type="text" name="feel" rows=5 [(ngModel)]="formdetail.feel"></ion-textarea>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -335,32 +336,32 @@
         <ion-list>
           <ion-item>
             <ion-label>Semester</ion-label>
-            <ion-input type="number" name="hour" position="stacked"></ion-input>
+            <ion-input type="number" position="stacked" [(ngModel)]="formdetail.hour"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Education Year</ion-label>
-            <ion-datetime display-format="YYYY" name="date"></ion-datetime>
+            <ion-datetime display-format="YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
           </ion-item>
         <ion-item>
           <ion-label position="stacked">Title of club</ion-label>
-          <ion-input type="text" name="place"></ion-input>
+          <ion-input type="text" name="place" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label>Type of club</ion-label>
-            <ion-select value="">
-              <ion-select-option value="brown">Academic Club</ion-select-option>
-              <ion-select-option value="blonde">Sport & Exercise Club</ion-select-option>
-              <ion-select-option value="black">Social Club</ion-select-option>
-              <ion-select-option value="red">Other Club</ion-select-option>
+            <ion-select (ionChange)="typeclub($event)">
+              <ion-select-option value="ชุมนุมวิชาการ">Academic Club</ion-select-option>
+              <ion-select-option value="ชุมนุมกีฬาและการออกกำลังกาย">Sport & Exercise Club</ion-select-option>
+              <ion-select-option value="ชุมนุมสังคมศึกษา ภาษา ศาสนา ศิลปวัฒนธรรมและโบราณคดี">Social Club</ion-select-option>
+              <ion-select-option value="ชุมนุมกิจกรรมอื่น ๆ">Other Club</ion-select-option>
             </ion-select>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Club knowledge</ion-label>
-          <ion-textarea type="text" name="make" rows=8></ion-textarea>
+          <ion-textarea type="text" name="make" rows=8 [(ngModel)]="formdetail.make"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Impression</ion-label>
-          <ion-textarea type="text" name="feel" rows=5></ion-textarea>
+          <ion-textarea type="text" name="feel" rows=5 [(ngModel)]="formdetail.feel"></ion-textarea>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -377,19 +378,19 @@
         <ion-list>
         <ion-item>
           <ion-label>DD/MM/YYYY</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label>Start</ion-label>
-          <ion-datetime display-format="HH : mm" name="date"></ion-datetime>
+          <ion-datetime display-format="HH : mm" [(ngModel)]="formdetail.timeStart"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label>End</ion-label>
-          <ion-datetime display-format="HH : mm" name="date"></ion-datetime>
+          <ion-datetime display-format="HH : mm" [(ngModel)]="formdetail.timeEnd"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Exercise Description</ion-label>
-          <ion-input type="text" name="feel"></ion-input>
+          <ion-input type="text" [(ngModel)]="formdetail.make"></ion-input>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -406,11 +407,11 @@
         <ion-list>
         <ion-item>
           <ion-label>DD/MM/YYYY</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" name="date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label>Title of meeting</ion-label>
-          <ion-input type="text" name="hour" position="stacked" max="2"></ion-input>
+          <ion-input type="text" name="hour" position="stacked" max="2" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
       </ion-list>
     </ion-card-content>
