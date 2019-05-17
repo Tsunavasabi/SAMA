@@ -72,7 +72,8 @@
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form2Confirm()"
+     color=light expand="full">SAVE</ion-button>
   </form>
 
   <form *ngIf="key == 'book'">
@@ -84,23 +85,23 @@
         <ion-list>
         <ion-item>
           <ion-label>Book Title</ion-label>
-          <ion-input type=text position="stacked" [(ngModel)]="formdetail.head"></ion-input>
+          <ion-input type=text position="stacked" [(ngModel)]="formdetail.head" name="head"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Author</ion-label>
-          <ion-input type="text" [(ngModel)]="formdetail.place"></ion-input>
+          <ion-input type="text" [(ngModel)]="formdetail.place" name="place"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Edition</ion-label>
-          <ion-input type="number" position="stacked" [(ngModel)]="formdetail.hour"></ion-input>
+          <ion-input type="number" position="stacked" name="hour" [(ngModel)]="formdetail.hour"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Publisher</ion-label>
-          <ion-input type="text" [(ngModel)]="formdetail.print"></ion-input>
+          <ion-input type="text" [(ngModel)]="formdetail.print" name="print"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Year</ion-label>
-          <ion-datetime display-format="YYYY" position="stacked" [(ngModel)]="formdetail.date"></ion-datetime>
+          <ion-datetime display-format="YYYY" position="stacked" name="date" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Book Description</ion-label>
@@ -113,7 +114,8 @@
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form3Confirm()"
+    color=light expand="full">SAVE</ion-button>
   </form>
 
   <form *ngIf="key == 'aca'">
@@ -142,7 +144,8 @@
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form4Confirm()"
+    color=light expand="full">SAVE</ion-button>
   </form>
 
   <form *ngIf="key == 'moral'">
@@ -171,7 +174,8 @@
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form5Confirm()"
+    color=light expand="full">SAVE</ion-button>
   </form>
 
   <form *ngIf="key == 'sciv'">
@@ -187,11 +191,11 @@
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Place of visit</ion-label>
-          <ion-input type="text" [(ngModel)]="formdetail.place"></ion-input>
+          <ion-input type="text" name="place" [(ngModel)]="formdetail.place"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Title of visit</ion-label>
-          <ion-input type="text" [(ngModel)]="formdetail.head"></ion-input>
+          <ion-input type="text" name="head" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Visiting knowledge</ion-label>
@@ -204,7 +208,8 @@
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form6Confirm()"
+    color=light expand="full">SAVE</ion-button>
   </form>
 
   <form *ngIf="key == 'sov'">
@@ -216,7 +221,7 @@
         <ion-list>
           <ion-item>
             <ion-label>Date of visit</ion-label>
-            <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
+            <ion-datetime display-format="DD/MM/YYYY" name="date" [(ngModel)]="formdetail.date"></ion-datetime>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Place of visit</ion-label>
@@ -237,7 +242,8 @@
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form7Confirm()"
+    color=light expand="full">SAVE</ion-button>
   </form>
 
   <form *ngIf="key == 'scil'">
@@ -249,11 +255,11 @@
         <ion-list>
         <ion-item>
           <ion-label>Date of lecture</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" name="date" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Title of lecture</ion-label>
-          <ion-input type="text" [(ngModel)]="formdetail.head"></ion-input>
+          <ion-input type="text" name="head" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Lecture knowledge</ion-label>
@@ -266,7 +272,8 @@
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form8Confirm()"
+    color=light expand="full">SAVE</ion-button> 
   </form>
 
   <form *ngIf="key == 'person'">
@@ -278,7 +285,7 @@
         <ion-list>
         <ion-item>
           <ion-label>Date of lecture</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" name="date" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Title of lecture</ion-label>
@@ -295,7 +302,8 @@
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form9Confirm()"
+    color=light expand="full">SAVE</ion-button>
   </form>
 
   <form *ngIf="key == 'sol'">
@@ -307,11 +315,11 @@
         <ion-list>
         <ion-item>
           <ion-label>Date of lecture</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" name="date" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Title of lecture</ion-label>
-          <ion-input type="text" [(ngModel)]="formdetail.head"></ion-input>
+          <ion-input type="text" name="head" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Lecture knowledge</ion-label>
@@ -324,7 +332,8 @@
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form10Confirm()"
+    color=light expand="full">SAVE</ion-button>
   </form>
 
   <form *ngIf="key == 'club'">
@@ -336,19 +345,19 @@
         <ion-list>
           <ion-item>
             <ion-label>Semester</ion-label>
-            <ion-input type="number" position="stacked" [(ngModel)]="formdetail.hour"></ion-input>
+            <ion-input type="number" position="stacked" [(ngModel)]="formdetail.hour" name="hour"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Education Year</ion-label>
-            <ion-datetime display-format="YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
+            <ion-datetime display-format="YYYY" [(ngModel)]="formdetail.date" name="date"></ion-datetime>
           </ion-item>
         <ion-item>
           <ion-label position="stacked">Title of club</ion-label>
-          <ion-input type="text" name="place" [(ngModel)]="formdetail.head"></ion-input>
+          <ion-input type="text" name="head" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label>Type of club</ion-label>
-            <ion-select (ionChange)="typeclub($event)">
+            <ion-select (ionChange)="typeclub($event)" name="place" [(ngModel)]="formdetail.place">
               <ion-select-option value="ชุมนุมวิชาการ">Academic Club</ion-select-option>
               <ion-select-option value="ชุมนุมกีฬาและการออกกำลังกาย">Sport & Exercise Club</ion-select-option>
               <ion-select-option value="ชุมนุมสังคมศึกษา ภาษา ศาสนา ศิลปวัฒนธรรมและโบราณคดี">Social Club</ion-select-option>
@@ -366,7 +375,8 @@
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form11Confirm()"
+    color=light expand="full">SAVE</ion-button>
   </form>
 
   <form *ngIf="key == 'exer'">
@@ -378,24 +388,25 @@
         <ion-list>
         <ion-item>
           <ion-label>DD/MM/YYYY</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date" name="date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label>Start</ion-label>
-          <ion-datetime display-format="HH : mm" [(ngModel)]="formdetail.timeStart"></ion-datetime>
+          <ion-datetime display-format="HH : mm" [(ngModel)]="formdetail.timeStart" name="start"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label>End</ion-label>
-          <ion-datetime display-format="HH : mm" [(ngModel)]="formdetail.timeEnd"></ion-datetime>
+          <ion-datetime display-format="HH : mm" [(ngModel)]="formdetail.timeEnd" name="end"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Exercise Description</ion-label>
-          <ion-input type="text" [(ngModel)]="formdetail.make"></ion-input>
+          <ion-input type="text" name="make" [(ngModel)]="formdetail.make"></ion-input>
         </ion-item>
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form12Confirm()"
+    color=light expand="full">SAVE</ion-button>
   </form>
 
   <form *ngIf="key == 'meet'">
@@ -407,15 +418,16 @@
         <ion-list>
         <ion-item>
           <ion-label>DD/MM/YYYY</ion-label>
-          <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="formdetail.date"></ion-datetime>
+          <ion-datetime display-format="DD/MM/YYYY" name="date" [(ngModel)]="formdetail.date"></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label>Title of meeting</ion-label>
-          <ion-input type="text" name="hour" position="stacked" max="2" [(ngModel)]="formdetail.head"></ion-input>
+          <ion-input type="text" name="head" position="stacked" max="2" [(ngModel)]="formdetail.head"></ion-input>
         </ion-item>
       </ion-list>
     </ion-card-content>
     </ion-card>
-    <ion-button type="submit" style="margin-top: 20px" size="large" color=light expand="full">SAVE</ion-button>
+    <ion-button type="submit" style="margin-top: 20px" size="large" (click)="Form13Confirm()"
+    color=light expand="full">SAVE</ion-button>
   </form>
 </ion-content> 

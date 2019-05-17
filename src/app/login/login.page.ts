@@ -18,8 +18,6 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    console.log(this.username)
-    console.log(this.password)
     let logindata = { username: this.username,
                       password: this.password}
     this.http.post('http://127.0.0.1/www/login1.php', JSON.stringify(logindata))

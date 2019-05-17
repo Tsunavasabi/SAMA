@@ -86,7 +86,7 @@ export class StdmemberPage implements OnInit {
     localStorage.setItem('key', this.key)
     this.navCtrl.navigateForward('/record')
   }
-  
+
   ToClub() {
     this.key = "club"
     localStorage.setItem('key', this.key)

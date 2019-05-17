@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar color="dark">
+      <ion-buttons slot="start" color="light">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>{{acttype.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="acttype.act_type == '01'">
+    
+  </div>
+  <div *ngIf="acttype.act_type == '02'">
+      <h1>School Outreach</h1>
+  </div>
+  <div *ngIf="acttype.act_type == '03'">
+      <h1>School Outreach</h1>
+  </div>
+  <div *ngIf="acttype.act_type == '04'">
+    <div>
+    <ion-card *ngFor="let act of actdata; let i = index">
+      <ion-card-header *ngIf="act.flag == '0'">
+        <ion-item>
+          <ion-label>No. {{i+1}}</ion-label>
+          <ion-button (click)="act.btn_press = 'true'" fill="clear" size="small" mode="md" slot="end">
+            <ion-icon name="arrow-dropdown" slot="icon-only" color="dark"></ion-icon>
+          </ion-button>
+          <ion-button (click)="act.btn_press = 'false'" fill="clear" size="small" mode="md" slot="end">
+            <ion-icon name="arrow-dropup" slot="icon-only" color="dark"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-card-header>
+      <ion-card-header *ngIf="act.flag == '1'">
+        No. {{i+1}} Sent
+          <ion-button (click)="out.btn_press = 'true'" icon-only color="dark" style="float: right">
+            <ion-icon style="color: #FFF" name="arrow-down-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="out.btn_press = 'false'" icon-only color="dark" style="float: right">
+            <ion-icon style="color: #FFF" name="arrow-up-outline"></ion-icon>
+          </ion-button>
+      </ion-card-header>
+      <ion-card-header *ngIf="act.flag == '3'">
+        No. {{i+1}} Checked <ion-icon name="checkmark-circle"></ion-icon>
+          <ion-button (click)="act.btn_press = 'true'" icon-only color="dark" style="float: right">
+            <ion-icon style="color: #FFF" name="arrow-down-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="act.btn_press = 'false'" icon-only color="dark" style="float: right">
+            <ion-icon style="color: #FFF" name="arrow-up-outline"></ion-icon>
+          </ion-button>
+      </ion-card-header>
+      <ion-card-header *ngIf="act.flag == '4'">
+        No. {{i+1}} Rejected..
+          <ion-button (click)="act.btn_press = 'true'" icon-only color="dark" style="float: right">
+            <ion-icon style="color: #FFF" name="arrow-down-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="act.btn_press = 'false'" icon-only color="dark" style="float: right">
+            <ion-icon style="color: #FFF" name="arrow-up-outline"></ion-icon>
+          </ion-button>
+      </ion-card-header>
+      <ion-card-content *ngIf="act.btn_press == 'true'">
+          Title of camp : {{act.act_head}}<br>
+          Place of camp : {{act.act_places}}<br>
+          Camp knowledge : {{act.act_details}}<br>
+          Impression : {{act.act_feels}}<br>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p style="text-align: center">
+                <ion-button size="small" *ngIf="act.flag == '0' || act.flag == '4'">
+                  <ion-icon name="create"></ion-icon>edit</ion-button>
+                <ion-button size="small" color=danger *ngIf="act.flag == '0' || act.flag == '4'">
+                  <ion-icon name="trash"></ion-icon>delete</ion-button>
+                <ion-button size="small" *ngIf="act.flag == '0' || act.flag == '4'">
+                  <ion-icon name="send"></ion-icon>send</ion-button>
+                <ion-button size="small" expand="full" *ngIf="act.flag == '1'">
+                  <ion-icon name="send"></ion-icon>Sending wait for check...</ion-button>
+                <ion-button size="small" expand="full" *ngIf="act.flag == '3'">
+                  <ion-icon name="checkbox"></ion-icon>Checked already</ion-button>
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row *ngIf="act.flag == '3'">
+            <b>Comment from approver</b>  :  {{act.act_advices}}
+          </ion-row>
+          <ion-row *ngIf="act.flag == '3'">
+            <b>Approved by</b>  :  {{act.tch_firstname}} {{act.tch_lastname}}
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  </div>
+  <div *ngIf="acttype.act_type == '05'">
+      <h1>School Outreach</h1>
+  </div>
+  <div *ngIf="acttype.act_type == '06'">
+      <h1>School Outreach</h1>
+  </div>
+  <div *ngIf="acttype.act_type == '07'">
+      <h1>School Outreach</h1>
+  </div>
+  <div *ngIf="acttype.act_type == '08'">
+      <h1>School Outreach</h1>
+  </div>
+  <div *ngIf="acttype.act_type == '09'">
+      <h1>School Outreach</h1>
+  </div>
+  <div *ngIf="acttype.act_type == '10'">
+      <h1>School Outreach</h1>
+  </div>
+  <div *ngIf="acttype.act_type == '11'">
+      <h1>School Outreach</h1>
+  </div>
+  <div *ngIf="acttype.act_type == '12'">
+      <h1>School Outreach</h1>
+  </div>
+  <div *ngIf="acttype.act_type == '13'">
+      <h1>School Outreach</h1>
+  </div>
+</ion-content>
